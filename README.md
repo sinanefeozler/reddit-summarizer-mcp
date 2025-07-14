@@ -51,3 +51,5 @@ Parameters:
 ### Prompt Template:
 #### `/summarize_my_page`
 Provides a prompt to summarize and categorize the posts and comments on frontpage. Gives LLM a predefined template and categorize to make a more human readable outputs.
+## License
+MIT
