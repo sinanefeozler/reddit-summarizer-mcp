@@ -22,7 +22,7 @@ async def get_reddit():
         return None
 
 @mcp.tool()
-async def reed_comments(id=None,url=None):
+async def reed_comments(id=None,url=None,limit=15):
     """
         Reads and summarizes the top level comments that a submission have.
         Args:
@@ -40,7 +40,7 @@ async def reed_comments(id=None,url=None):
     cnt = 0
     async for comment in submission.comments:
         if isinstance(comment,asyncpraw.models.MoreComments): continue
-        if cnt > 15: break
+        if cnt > limit: break
         cnt += 1
         res.append(comment.body)
     await reddit.close()
