@@ -6,6 +6,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
+
 mcp = FastMCP("reddit-summary")
 
 async def get_reddit():
